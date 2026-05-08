@@ -8,9 +8,11 @@ public class playerMove : MonoBehaviour
 	public float speed = 8.0f;
     public float jumpForce = 8.0f;
     public Rigidbody2D rb;
-    public Transform groundCheck;
+    public Transform groundCheckBottom;
+    public Transform groundCheckTop;
     public LayerMask groundLayer;
     private bool isGrounded;
+    private bool isHit;
     void Start()
     {
         
@@ -19,8 +21,8 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-        transform.Translate(new Vector2(x:speed * Time.deltaTime, y:0));
+        isGrounded = Physics2D.OverlapCircle(groundCheckBottom.position, 0.1f, groundLayer) || Physics2D.OverlapCircle(groundCheckTop.position, 0.1f, groundLayer);
+       transform.Translate(new Vector2(x:speed * Time.deltaTime, y:0));
         jump();
     }
 

@@ -5,11 +5,12 @@ using UnityEngine;
 public class cameraScript : MonoBehaviour
 {
     public Transform player;
+    public Transform canvas;
     public float speed = 0.125f;
     public Vector3 offset;
-    
+    public bool isFollowing = false;
     private float startFollowingX = 0.0f;
-    private bool isFollowing = false;
+    
 
     // Start is called before the first frame update
     void Start()
