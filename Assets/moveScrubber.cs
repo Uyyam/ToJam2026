@@ -9,7 +9,6 @@ public playerMove playerMoveScript;
 private bool isDragging = false;
 private float previousPositionX;
 private float currentPositionX;
-private float startPositionX;
  public RectTransform rectTransform;
     public Canvas canvas;
     // Start is called before the first frame update
@@ -28,7 +27,6 @@ public void OnPointerDown(PointerEventData eventData)
         {
 isDragging = true;
 previousPositionX = eventData.position.x;
-startPositionX = eventData.position.x;
 print("Pointer Down: " + eventData.position);
         }
 public void OnDrag(PointerEventData eventData)
@@ -46,13 +44,15 @@ if(deltaX < 0)
 playerMoveScript.speed = -Mathf.Abs(playerMoveScript.speed);
 MoveScrubberToMouse(eventData.position);
             }
-            else{
-                if(eventData.position.x < startPositionX)
-                {
-                     print("Slow down speed");
-                }
+            // else{
+            //     if(eventData.position.x < startPositionMouse)
+            //     {
+            //          print("Slow down speed");
+            //          MoveScrubberToMouse(eventData.position);
+            //          playerMoveScript.speed = -Mathf.Abs(initialPlayerSpeed) * 0.5f;
+            //     }
                
-    }
+   // }
     }
 public void OnPointerUp(PointerEventData eventData)
     {
