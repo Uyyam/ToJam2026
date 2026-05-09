@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {  
         public GameObject player;
+        public GameObject gameOverScreen;
     public GameObject scrubber;
     public Transform respawnPoint;   
     public AudioSource music;
@@ -21,6 +22,8 @@ public class GameOver : MonoBehaviour
     { 
         // TODO: depends on how scene handled, May knows better for this
             player.transform.position = respawnPoint.position;
+            gameOverScreen.SetActive(false);
+            Time.timeScale = 1f;
             music.Play(); // plays music back from the beginning when player respawns
             scrubber.transform.position = new Vector3(respawnPoint.position.x + scrubberOffset, scrubber.transform.position.y);
     }
