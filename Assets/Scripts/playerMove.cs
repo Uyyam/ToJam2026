@@ -5,9 +5,9 @@ using UnityEngine;
 public class playerMove : MonoBehaviour
 {
 
-   public float baseBPM = 120f;        
-    public float currentBPM = 120f;     
-    public float unitsPerBeat = 4f;      
+   public float baseBPM = 140f;        
+    public float currentBPM = 140f;     
+    public float unitsPerBeat = 3f;      
 	public float speed;
     public float jumpForce = 8.0f;
     public Rigidbody2D rb;
@@ -19,12 +19,13 @@ public class playerMove : MonoBehaviour
     private bool isHit;
     void Start()
     {
+        speed =  (currentBPM / 60f) * unitsPerBeat;
     }
 
     // Update is called once per frame
     void Update()
     {
-        speed =  (currentBPM / 60f) * unitsPerBeat;
+        
         isGrounded = Physics2D.OverlapCircle(groundCheckBottom.position, 0.1f, groundLayer) || Physics2D.OverlapCircle(groundCheckTop.position, 0.1f, groundLayer);
        transform.Translate(new Vector2(x:speed * Time.deltaTime, y:0));
        Debug.Log("TIME: " + Time.deltaTime * speed);
