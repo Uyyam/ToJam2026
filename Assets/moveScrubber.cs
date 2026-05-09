@@ -12,9 +12,19 @@ private float previousPositionX;
 private float currentPositionX; 
 public RectTransform rectTransform; 
 public Canvas canvas;
+ public AudioSource music;
+ public AudioSource source;
+public AudioClip clip;
     // Start is called before the first frame update
 void Start()
     {
+    StartCoroutine(AudioClipReverse.CreateReversedCoroutine(clip, reversed =>
+    	{
+    	if (reversed == null){
+    	return;
+    	}
+    	source.clip = reversed;
+    	}));
     }
     // Update is called once per frame
 void Update()
@@ -47,6 +57,10 @@ public void OnDrag(PointerEventData eventData)
             float clampedX = Mathf.Clamp(eventData.position.x, 250f, 420f);
             Vector2 clampedPosition = new Vector3(clampedX, eventData.position.y);
             MoveScrubberToMouse(clampedPosition);
+            if(!source.isPlaying){
+		source.Play();
+		}
+		music.Pause();
         }
         // else{
         //     if(eventData.position.x < startPositionMouse)
@@ -62,6 +76,8 @@ public void OnPointerUp(PointerEventData eventData)
     {
         isDragging = false;
         playerMoveScript.speed = Mathf.Abs(playerMoveScript.speed);
+        music.Play();
+source.Stop();
     }
 
     private void MoveScrubberToMouse(Vector2 screenPosition)
