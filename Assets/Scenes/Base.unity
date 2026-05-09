@@ -376,9 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2364c0dccc67ab04cb79ea5795c4336b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 301350976}
-  scrubber: {fileID: 1523200471}
-  respawnPoint: {fileID: 294986436}
+  music: {fileID: 338170751}
+  gameOverScreen: {fileID: 588613387}
 --- !u!61 &48970178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2928,6 +2927,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430f778ee07646740b059d8ee98d8341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  scrubber: {fileID: 0}
+  respawnPoint: {fileID: 0}
+  music: {fileID: 0}
 --- !u!1 &469656725
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,9 +3664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2364c0dccc67ab04cb79ea5795c4336b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 301350976}
-  scrubber: {fileID: 1523200471}
-  respawnPoint: {fileID: 294986436}
+  music: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!61 &882440743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125934,9 +125936,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2364c0dccc67ab04cb79ea5795c4336b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 301350976}
-  scrubber: {fileID: 1523200471}
-  respawnPoint: {fileID: 294986436}
+  music: {fileID: 338170751}
+  gameOverScreen: {fileID: 588613387}
 --- !u!1 &1457639156
 GameObject:
   m_ObjectHideFlags: 0
@@ -126644,9 +126645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2364c0dccc67ab04cb79ea5795c4336b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 301350976}
-  scrubber: {fileID: 1523200471}
-  respawnPoint: {fileID: 294986436}
+  music: {fileID: 338170751}
+  gameOverScreen: {fileID: 588613387}
 --- !u!1 &1620174472
 GameObject:
   m_ObjectHideFlags: 0

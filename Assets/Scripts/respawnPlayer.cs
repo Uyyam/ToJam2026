@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class killPlayer : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject scrubber;
-    public Transform respawnPoint;
+
+    public AudioSource music;
+    public GameObject gameOverScreen;
 
     //current distance between scrubber and player, respawns relative to player position
-    public const float scrubberOffset = -6f; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +23,18 @@ public class killPlayer : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
+
+        
         if(other.gameObject.CompareTag("Player"))
         {
-            // TODO: have music rewind to position - make camera jump(?) to respawn point
-            player.transform.position = respawnPoint.position;
-            scrubber.transform.position = new Vector3(respawnPoint.position.x + scrubberOffset, scrubber.transform.position.y);
+            //Here we want to make the game over screen pop up, and then have the option to restart the level or go back to the main menu
+            music.Stop(); // Stops music when player dies
+            gameOverScreen.SetActive(true);
+            Time.timeScale = 0f;
+            // this code we can then move to when the player presses the restart button (to respawn)
+            // player.transform.position = respawnPoint.position;
+            // music.Play(); // plays music back from the beginning when player respawns
+            // scrubber.transform.position = new Vector3(respawnPoint.position.x + scrubberOffset, scrubber.transform.position.y);
         }
     }
 }
