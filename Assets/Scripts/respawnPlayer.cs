@@ -27,7 +27,7 @@ public class killPlayer : MonoBehaviour
         {
             // TODO: have music rewind to position - make camera jump(?) to respawn point
             player.transform.position = respawnPoint.position;
-            scrubber.transform.position = respawnPoint.position + new Vector3(scrubberOffset, 0, 0);
+            scrubber.transform.position = new Vector3(respawnPoint.position.x + scrubberOffset, scrubber.transform.position.y);
         }
     }
 }
