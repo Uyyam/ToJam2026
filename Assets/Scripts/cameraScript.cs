@@ -9,7 +9,7 @@ public class cameraScript : MonoBehaviour
     public float speed = 0.125f;
     public Vector3 offset;
     public bool isFollowing = false;
-    private float startFollowingX = 0.0f;
+    public float startFollowingX = -65.7f;
     private Vector3 velocity = new Vector3(0, 0, 0);
     
 
@@ -32,9 +32,14 @@ public class cameraScript : MonoBehaviour
             var desiredPosition = player.position + offset;
             var smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, speed);
             
-            var clampedY = new Vector3 (smoothedPosition.x, transform.position.y, transform.position.z);
-            transform.position = clampedY;
-
+            transform.position = new Vector3(smoothedPosition.x, smoothedPosition.y, transform.position.z);
+            
         }
     }
+
+    public void ResetCamera(float x, float y)
+{
+    velocity = Vector3.zero; // clear smoothdamp velocity or it'll drift
+    transform.position = new Vector3(x, y, transform.position.z);
+}
 }
