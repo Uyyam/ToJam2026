@@ -10,6 +10,7 @@ public class cameraScript : MonoBehaviour
     public Vector3 offset;
     public bool isFollowing = false;
     private float startFollowingX = 0.0f;
+    private Vector3 velocity = new Vector3(0, 0, 0);
     
 
     // Start is called before the first frame update
@@ -29,7 +30,7 @@ public class cameraScript : MonoBehaviour
         if (isFollowing)
         {
             var desiredPosition = player.position + offset;
-            var smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, speed);
+            var smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, speed);
             
             var clampedY = new Vector3 (smoothedPosition.x, transform.position.y, transform.position.z);
             transform.position = clampedY;
