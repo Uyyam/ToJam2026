@@ -29,7 +29,6 @@ private IEnumerator PanCamera(float targetY, float duration)
     {
         elapsed += Time.deltaTime;
         float t = elapsed / duration;
-        t = t * t * (3f - 2f * t); // smoothstep
 
         // Y pans to target, X follows player in real time
         float newY = Mathf.Lerp(startY, targetY, t);
