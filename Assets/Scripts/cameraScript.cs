@@ -9,7 +9,7 @@ public class cameraScript : MonoBehaviour
     public float speed = 0.125f;
     public Vector3 offset;
     public bool isFollowing = false;
-    private float startFollowingX = 0.0f;
+    public float startFollowingX = -65.7f;
     private Vector3 velocity = new Vector3(0, 0, 0);
     
 

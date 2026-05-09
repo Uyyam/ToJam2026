@@ -11,6 +11,7 @@ public class GameOver : MonoBehaviour
         public GameObject gameOverScreen;
     public GameObject scrubber;
     public Slider jumpSlider;
+    public speedScroll speedScript;
     public cameraScript camera;
     public Transform respawnPoint;   
     public AudioSource music;
@@ -31,9 +32,10 @@ public class GameOver : MonoBehaviour
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
             rb.gravityScale = 5.0f; // reset gravity to normal when player respawns
             playerMove playerMoveScript = player.GetComponent<playerMove>();
-            playerMoveScript.jumpForce = 14.0f; // reset jump force to normal
-            jumpSlider.value = 0.5f;
+            playerMoveScript.jumpForce = 18.0f; // reset jump force to normal
+            jumpSlider.value = 0.37f;
             playerMoveScript.currentBPM = 140f; // reset BPM to normal
+            speedScript.changeSpeed();
             camera.ResetCamera(player.transform.position.x, -3.73f); // reset camera to player position
         
     }
