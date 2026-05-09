@@ -73,9 +73,13 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
 
     public void changeSpeed()
     {
+         float newBPM = Mathf.Lerp(60, 180, Mathf.InverseLerp(0, 1, currentValue));
+
+        playerMoveScript.currentBPM = newBPM;
+
         playerMoveScript.speed = Mathf.Lerp(4, 20, Mathf.InverseLerp(0, 1, currentValue));
-        BPMText.text = Mathf.RoundToInt(Mathf.Lerp(60, 200, Mathf.InverseLerp(0, 1, currentValue))) + " BPM";
-        music.pitch = Mathf.Lerp(0.5f, 1.5f, Mathf.InverseLerp(0, 1, currentValue));
+        BPMText.text = Mathf.RoundToInt(newBPM).ToString() + " BPM";
+        music.pitch = Mathf.Lerp(0.5f, 1.5f, Mathf.InverseLerp(60, 180, newBPM));
     }
 }
 

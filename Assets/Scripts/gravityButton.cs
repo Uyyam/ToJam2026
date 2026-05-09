@@ -7,6 +7,7 @@ public class gravityButton : MonoBehaviour
 {
     public playerMove playerMoveScript;
     public Rigidbody2D playerRb;
+    public Transform graph;
     public float gravityInverted = 1.0f;
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,6 @@ public class gravityButton : MonoBehaviour
         gravityInverted = gravityInverted * -1.0f;
         playerRb.gravityScale = -playerRb.gravityScale;
         playerMoveScript.jumpForce = -playerMoveScript.jumpForce;
+        graph.Rotate(0, 0, 180);
     }
 }

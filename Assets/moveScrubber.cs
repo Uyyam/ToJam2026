@@ -53,12 +53,12 @@ public void OnDrag(PointerEventData eventData)
         {
             //make scrubber move where mouse is and make speed relative to scrub speed
             playerMoveScript.speed = -Mathf.Abs(playerMoveScript.speed);
-            Debug.Log(eventData.position.x);
             float clampedX = Mathf.Clamp(eventData.position.x, 250f, 420f);
             Vector2 clampedPosition = new Vector3(clampedX, eventData.position.y);
             MoveScrubberToMouse(clampedPosition);
             if(!source.isPlaying){
-		source.Play();
+		source.time = music.clip.length - music.time;
+        source.Play();
 		}
 		music.Pause();
         }
@@ -76,6 +76,7 @@ public void OnPointerUp(PointerEventData eventData)
     {
         isDragging = false;
         playerMoveScript.speed = Mathf.Abs(playerMoveScript.speed);
+        music.time = source.clip.length - source.time;
         music.Play();
 source.Stop();
     }
