@@ -10,6 +10,8 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
     public float maxValue = 1f;
     public float currentValue = 0.5f;
 
+    public Image fillBar;
+
     public playerMove playerMoveScript;
     public Text BPMText;
     public AudioSource music;
@@ -27,7 +29,6 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
     // Update is called once per frame
     void Update()
     {
-        
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -54,7 +55,7 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
         float valueRange = maxValue - minValue;
         currentValue += (delta / 360f) * valueRange;
         currentValue = Mathf.Clamp(currentValue, minValue, maxValue);
-        
+        fillBar.fillAmount =  currentValue/maxValue;
     
 
         onValueChanged?.Invoke(currentValue);
