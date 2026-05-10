@@ -70,7 +70,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.289
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
@@ -118,11 +118,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: InstrumentSans-SemiBold SDF 1
+  m_Name: OUTLINE-InstrumentSans-SemiBold SDF 2
   m_EditorClassIdentifier: 
-  hashCode: -2063410944
+  hashCode: -872381266
   material: {fileID: -8261429219525957888}
-  materialHashCode: -968375136
+  materialHashCode: -1980702514
   m_Version: 1.1.0
   m_SourceFontFileGUID: e6c87b3eae4c6de41a8019250409a2b2
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: e6c87b3eae4c6de41a8019250409a2b2, type: 3}

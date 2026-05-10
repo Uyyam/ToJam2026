@@ -8,16 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5a1d8b4-25d4-4e43-acef-379604e3044e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ToJam2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToJam2026/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/Player1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/Player1.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/held.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/held.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Base.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Base.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/gravityButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/gravityButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/distanceSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/distanceSlider.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,24 +30,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "stormy-more-animations",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;stormy-more-animations&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
@@ -103,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1778293833116</updated>
       <workItem from="1778293836924" duration="1280000" />
+      <workItem from="1778437415426" duration="4001000" />
     </task>
     <servers />
   </component>
