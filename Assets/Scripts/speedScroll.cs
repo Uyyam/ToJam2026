@@ -19,12 +19,14 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
     public AudioSource reverse;
     private bool isDragging = false;
     private float previousAngle;
+
+    public Quaternion startingRotation;
     // Start is called before the first frame update
     public UnityEngine.Events.UnityEvent<float> onValueChanged;
     
     void Start()
     {
-        
+        startingRotation = transform.rotation;
     }
 
     // Update is called once per frame

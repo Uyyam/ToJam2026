@@ -43,7 +43,7 @@ public class playerMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            animator.SetTrigger("jump");
+            animator.SetTrigger("jump_pressed");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }

@@ -50,6 +50,8 @@ public class GameOver : MonoBehaviour
     playerMoveScript.currentBPM = 140f;
     speedScript.currentValue = 0.5f;
     speedScript.changeSpeed(); // this sets pitch too
+    speedScript.transform.rotation = speedScript.startingRotation;
+    speedScript.fillBar.fillAmount =  speedScript.currentValue/speedScript.maxValue;
 
     // Now play music at the correct pitch
     music.Stop();
