@@ -6,6 +6,7 @@ public class killPlayer : MonoBehaviour
 {
 
     public AudioSource music;
+    public AudioSource ouch;
     public GameObject gameOverScreen;
     public Canvas gameCanvas;
     //current distance between scrubber and player, respawns relative to player position
@@ -30,7 +31,7 @@ public class killPlayer : MonoBehaviour
             //Here we want to make the game over screen pop up, and then have the option to restart the level or go back to the main menu
             music.Stop(); // Stops music when player dies
             gameOverScreen.SetActive(true);
-        
+            ouch.Play(); // Plays ouch sound effect when player dies
             Time.timeScale = 0f;
             // this code we can then move to when the player presses the restart button (to respawn)
             // player.transform.position = respawnPoint.position;
