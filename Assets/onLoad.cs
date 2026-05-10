@@ -11,6 +11,7 @@ public class onLoad : MonoBehaviour
 	public playerMove playerScript;
 	public Text dialogue;
 	public menuScript menuScript;
+	public CanvasGroup canvas;
 	private int primeInt = 1;
 	void Awake()
 	{
@@ -22,6 +23,7 @@ public class onLoad : MonoBehaviour
     void Start()
     {
         menuScript.isPlaying = false;
+        canvas.interactable = false;
         //play idle Anim
     }
 
@@ -54,6 +56,7 @@ public class onLoad : MonoBehaviour
     
     public void playGame(){
     playerScript.isMoving = true;
+    canvas.interactable = true;
     menuScript.play();
     dialogueDisplay.SetActive(false);
     

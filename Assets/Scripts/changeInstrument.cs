@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class changeInstrument : MonoBehaviour
 {
@@ -8,11 +9,16 @@ public class changeInstrument : MonoBehaviour
     public Transform player;
     public float panHeight = 5.0f;
     public jumpSliderScript jumpSlider;
+    public Button instrument1;
+    public Button instrument2;
+    public Button instrument3;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+    instrument2.interactable = false;
+    instrument3.interactable = false; // set some triggers for them to become true
     }
 
     // Update is called once per frame
