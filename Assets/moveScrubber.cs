@@ -15,6 +15,7 @@ public Canvas canvas;
  public AudioSource music;
  public AudioSource source;
 public AudioClip clip;
+public Animator animator;
     // Start is called before the first frame update
 void Start()
     {
@@ -29,6 +30,7 @@ void Start()
     // Update is called once per frame
 void Update()
     {
+        animator.SetBool("scrubber_held", isDragging);
         if(cameraScript.isFollowing)
         { 
             transform.Translate(new Vector2(x:playerMoveScript.speed * Time.deltaTime, y:0));
