@@ -8,12 +8,13 @@ public class onLoad : MonoBehaviour
 	public AudioSource music;
 	public Transform player;
 	public GameObject dialogueDisplay;
+	public playerMove playerScript;
 	public Text dialogue;
 	public menuScript menuScript;
 	private int primeInt = 1;
 	void Awake()
 	{
-		Time.timeScale = 0.0f;
+		playerScript.isMoving = false;
 		music.Stop();
 	
 	}
@@ -21,12 +22,12 @@ public class onLoad : MonoBehaviour
     void Start()
     {
         menuScript.isPlaying = false;
+        //play idle Anim
     }
 
     // Update is called once per frame
     void Update()
     {
-    print(player.position.x);
         if (Input.GetKeyDown("space") && !menuScript.isPlaying){
                       Next();
                       }
@@ -50,7 +51,7 @@ public class onLoad : MonoBehaviour
     }
     
     public void playGame(){
-    
+    playerScript.isMoving = true;
     menuScript.play();
     dialogueDisplay.SetActive(false);
     
