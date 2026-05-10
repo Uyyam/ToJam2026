@@ -27,9 +27,10 @@ public class onLoad : MonoBehaviour
     void Update()
     {
     print(player.position.x);
-        if (Input.GetKeyDown("space") && !menuScript.isPlaying){
-                      Next();
-                      }
+        if (Input.GetKeyDown("space") && !menuScript.isPlaying)
+        { 
+	        Next(); 
+        }
     }
     
     public void Next(){
