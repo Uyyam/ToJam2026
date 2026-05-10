@@ -9,7 +9,7 @@ public class menuScript : MonoBehaviour
     public AudioSource music;
     public Button playButton;
     public Button pauseButton;
-    private bool isPlaying = true;
+    public bool isPlaying = false;
 
     // Start is called before the first frame update
     void Start()
