@@ -7,6 +7,7 @@ public class moveScrubber : MonoBehaviour,IPointerDownHandler, IDragHandler, IPo
 {
 public cameraScript cameraScript;
 public playerMove playerMoveScript;
+public AudioSource ouch;
 public GameObject gameOverScreen;
 private bool isDragging = false;
 private float previousPositionX;
@@ -42,6 +43,7 @@ void Update()
         {
             music.Stop(); // Stops music when player dies
             gameOverScreen.SetActive(true);
+            ouch.Play(); // Plays ouch sound effect when player dies
         
             Time.timeScale = 0f;
         }

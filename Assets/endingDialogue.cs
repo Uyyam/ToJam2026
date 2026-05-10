@@ -10,6 +10,7 @@ public class endingDialogue : MonoBehaviour
 
 	public GameObject scene21;
 	public GameObject scene22;
+        public GameObject scene23;
 
 	public TextMeshProUGUI dialogue;
 	private int primeInt = 1;
@@ -20,7 +21,7 @@ public class endingDialogue : MonoBehaviour
     {
         scene21.SetActive(true);
         scene22.SetActive(false);
-
+        scene23.SetActive(false);
     }
 
     // Update is called once per frame
@@ -67,8 +68,23 @@ public class endingDialogue : MonoBehaviour
         }
        
         else if (primeInt == 10){
-        	SceneManager.LoadScene("Menu");
+        	scene22.SetActive(false);
+
+                dialogue.text = "The next day...";
         }
+        else if(primeInt == 11)
+                {
+                scene23.SetActive(true);
+                        dialogue.text = "I love it!";
+                }
+                else if(primeInt == 12)
+                {
+                        dialogue.text = "The End <3";
+                }
+                else if(primeInt == 13)
+                {
+                        SceneManager.LoadScene("Menu");
+                }
 
 
     

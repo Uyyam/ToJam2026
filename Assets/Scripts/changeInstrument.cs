@@ -9,6 +9,9 @@ public class changeInstrument : MonoBehaviour
     public Transform player;
     public float panHeight = 5.0f;
     public jumpSliderScript jumpSlider;
+    public AudioSource inst1;
+    public AudioSource inst2;
+    public AudioSource inst3;
     public Button instrument1;
     public Button instrument2;
     public Button instrument3;
@@ -123,6 +126,7 @@ public void changeTo1()
     StopAllCoroutines(); 
     StartCoroutine(PanCamera(-3.73f, 2f));
     selectedInstrument = 1;
+    inst1.Play();
 }
 
 public void changeTo2()
@@ -130,6 +134,7 @@ public void changeTo2()
     StopAllCoroutines();
     StartCoroutine(PanCamera(-3.73f - panHeight, 2f));
     selectedInstrument = 2;
+    inst2.Play();
 
 }
 
@@ -138,6 +143,8 @@ public void changeTo3()
     StopAllCoroutines();
     StartCoroutine(PanCamera(-3.73f + panHeight, 2f));
     selectedInstrument = 3;
+    inst3.Play();
+
 }
 
 }
