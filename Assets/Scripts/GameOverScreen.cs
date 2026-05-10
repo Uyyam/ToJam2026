@@ -13,30 +13,59 @@ public class GameOver : MonoBehaviour
     public Slider jumpSlider;
     public speedScroll speedScript;
     public cameraScript camera;
+    public gravityButton gravityButtonScript;
     public Transform respawnPoint;   
+    public changeInstrument changeInstrumentScript;
     public AudioSource music;
-     public const float scrubberOffset = -6f; 
+     public const float scrubberOffset = -12f; 
     public void Setup()
     {
        // gameObject.SetActive(true);
     }
 
+
     public void RestartButton()
-    { 
-        // TODO: depends on how scene handled, May knows better for this
-            player.transform.position = respawnPoint.position;
-            gameOverScreen.SetActive(false);
-            Time.timeScale = 1f;
-            music.Play(); // plays music back from the beginning when player respawns
-            scrubber.transform.position = new Vector3(respawnPoint.position.x + scrubberOffset, scrubber.transform.position.y);
-            Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-            rb.gravityScale = 5.0f; // reset gravity to normal when player respawns
-            playerMove playerMoveScript = player.GetComponent<playerMove>();
-            playerMoveScript.jumpForce = 18.0f; // reset jump force to normal
-            jumpSlider.value = 0.37f;
-            playerMoveScript.currentBPM = 140f; // reset BPM to normal
-            speedScript.changeSpeed();
-            camera.ResetCamera(player.transform.position.x, -3.73f); // reset camera to player position
+{
+    // Reset gravity state explicitly, don't rely on the bool
+    Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+    playerMove playerMoveScript = player.GetComponent<playerMove>();
+
+    // Force gravity back to normal regardless of current state
+    rb.gravityScale = Mathf.Abs(rb.gravityScale);       // always positive
+    playerMoveScript.jumpForce = Mathf.Abs(playerMoveScript.jumpForce); // always positive
+
+    // Reset gravity button visual state
+    gravityButtonScript.gravityIsActive = true;
+    gravityButtonScript.gravityInverted = 1.0f;
+    ColorBlock cb = gravityButtonScript.button.colors;
+    cb.normalColor = gravityButtonScript.baseColor; // or cache baseColor
+    gravityButtonScript.button.colors = cb;
+    gravityButtonScript.animator.SetTrigger("DisableGrav"); 
+
+    // Reset position and physics
+    player.transform.position = respawnPoint.position;
+    rb.velocity = Vector2.zero;
+
+    // Reset speed BEFORE playing music
+    playerMoveScript.currentBPM = 140f;
+    speedScript.currentValue = 0.5f;
+    speedScript.changeSpeed(); // this sets pitch too
+
+    // Now play music at the correct pitch
+    music.Stop();
+    music.Play();
+
+    // Rest of resets
+    gameOverScreen.SetActive(false);
+    Time.timeScale = 1f;
+    scrubber.transform.position = new Vector3(respawnPoint.position.x + scrubberOffset, scrubber.transform.position.y);
+    playerMoveScript.jumpForce = 18.0f;
+    jumpSlider.value = 0.37f;
+    camera.ResetCamera(player.transform.position.x, -3.73f);
+    changeInstrumentScript.selectedInstrument = 1;
+    changeInstrumentScript.hitCollider1 = false;
+    changeInstrumentScript.hitCollider2 = false;
+
         
     }
 

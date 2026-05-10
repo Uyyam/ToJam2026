@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class dialogueScript : MonoBehaviour
 {
+        public AudioSource intro;
+        public AudioSource transition;
 	public GameObject scene11;
 	public GameObject scene12;
 	public GameObject scene13;
@@ -14,7 +17,7 @@ public class dialogueScript : MonoBehaviour
 	public GameObject scene16;
 	public GameObject scene17;
 	public GameObject dialogueDisplay;
-	public Text dialogue;
+	public TextMeshProUGUI dialogue;
 	private int primeInt = 1;
 	private bool animPlaying = false;
 	
@@ -58,7 +61,7 @@ public class dialogueScript : MonoBehaviour
                 dialogue.text = "Oh yeah, I forgot to mention. I’m a producer. ";
         }
        else if (primeInt == 6){
-               dialogue.text = "I’ve gotta help make a debut album for this cute girl who makes the type of pop music that you’d hear both in a club, or in an elementary school bus.  ";
+               dialogue.text = "I’ve gotta help make a debut album for this cute girl who makes the type of pop music that you’d hear both in a club, or on an elementary school bus.  ";
         }
        else if (primeInt ==7){
                 dialogue.text = "Fun, but safe. Y’know the vibe. ";
@@ -80,6 +83,8 @@ public class dialogueScript : MonoBehaviour
        else if (primeInt == 12){
        	scene12.SetActive(false);
        	scene13.SetActive(true);
+        intro.Stop();
+        transition.Play();
        	animPlaying = true;
        	dialogueDisplay.SetActive(false);
         }

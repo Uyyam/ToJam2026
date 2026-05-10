@@ -7,6 +7,7 @@ public class moveScrubber : MonoBehaviour,IPointerDownHandler, IDragHandler, IPo
 {
 public cameraScript cameraScript;
 public playerMove playerMoveScript;
+public GameObject gameOverScreen;
 private bool isDragging = false;
 private float previousPositionX;
 private float currentPositionX; 
@@ -35,6 +36,16 @@ void Update()
         { 
             transform.Translate(new Vector2(x:playerMoveScript.speed * Time.deltaTime, y:0));
         }
+        //check if hit player
+        
+        if(transform.position.x > playerMoveScript.transform.position.x - 0.5f && transform.position.x < playerMoveScript.transform.position.x + 0.5f)
+        {
+            music.Stop(); // Stops music when player dies
+            gameOverScreen.SetActive(true);
+        
+            Time.timeScale = 0f;
+        }
+
     }
 public void OnPointerDown(PointerEventData eventData)
         { 

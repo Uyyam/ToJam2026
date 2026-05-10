@@ -32,7 +32,7 @@ public class jumpSliderScript : MonoBehaviour
     	if(!playerScript.isGrounded){
         jumpDist = Mathf.Abs(player.position.y - playerStartY);
     	jumpBar.value= Mathf.Lerp(0, 1, Mathf.InverseLerp(0, 7, jumpDist));
-    	print(jumpDist);
+  //  	print(jumpDist);
     	}
     }
     

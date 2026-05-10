@@ -11,13 +11,13 @@ public class gravityButton : MonoBehaviour
     public Scrollbar gravityScrollbar;
     public float gravityInverted = 1.0f;
 
-    private Color baseColor;
+    public Color baseColor;
     private Color toggledColor;
 
     public Animator animator;
-    private bool gravityIsActive = true;
+    public bool gravityIsActive = true;
 
-    private Button button;
+    public Button button;
     // Start is called before the first frame update
     void Start()
     {

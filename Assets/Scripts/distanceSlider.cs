@@ -23,7 +23,7 @@ public class distanceSlider : MonoBehaviour
     }
     
     public void updateProgress(){
-    	var totalDist = end.position.x - Mathf.Abs(start.position.x);
+    	var totalDist = end.position.x + Mathf.Abs(start.position.x);
     	var percentage = (player.position.x - start.position.x)/totalDist * 100;
     	distSlider.value = percentage/100;
     	distText.text =  Mathf.RoundToInt(percentage).ToString() + "%";

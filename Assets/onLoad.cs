@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class onLoad : MonoBehaviour
 {
 	public AudioSource music;
+    public AudioSource intro;
 	public Transform player;
 	public GameObject dialogueDisplay;
+    public GameObject tutorialDisplay;
+    public GameObject button;
 	public playerMove playerScript;
-	public Text dialogue;
+	public TextMeshProUGUI dialogue;
 	public menuScript menuScript;
 	public CanvasGroup canvas;
 	private int primeInt = 1;
@@ -30,7 +34,7 @@ public class onLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    print(player.position.x);
+//    print(player.position.x);
         if (Input.GetKeyDown("space") && !menuScript.isPlaying)
         { 
 	        Next(); 
@@ -49,7 +53,12 @@ public class onLoad : MonoBehaviour
                dialogue.text = "I gotta get outta here! ";
         }
         else if (primeInt == 4){
-               playGame();
+              tutorialDisplay.SetActive(true);
+              dialogueDisplay.SetActive(false);
+        }
+        else if(primeInt == 5)
+        {
+            playGame();
         }
     
     }
@@ -57,8 +66,10 @@ public class onLoad : MonoBehaviour
     public void playGame(){
     playerScript.isMoving = true;
     canvas.interactable = true;
+    intro.Stop();
     menuScript.play();
-    dialogueDisplay.SetActive(false);
+     tutorialDisplay.SetActive(false);
+     button.SetActive(false);
     
     }
 }
