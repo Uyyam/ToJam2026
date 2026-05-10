@@ -10,12 +10,14 @@
     <list default="true" id="d5a1d8b4-25d4-4e43-acef-379604e3044e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ToJam2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToJam2026/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/Player1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/Player1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/held.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/held.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/idle.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/ladyOfTheLake_.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/ladyOfTheLake_.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/run.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Base.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Base.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/gravityButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/gravityButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/moveScrubber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/moveScrubber.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "player-animations",
+    "git-widget-placeholder": "stormy-more-animations",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
