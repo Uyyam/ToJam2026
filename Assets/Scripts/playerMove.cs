@@ -19,6 +19,7 @@ public class playerMove : MonoBehaviour
     public bool isGrounded;
     private bool isHit;
     public Animator animator;
+    
     void Start()
     {
         speed =  (currentBPM / 60f) * unitsPerBeat;
