@@ -16,6 +16,7 @@ public class gravityButton : MonoBehaviour
 
     public Animator animator;
     private bool gravityIsActive = true;
+    public Transform playerSprite;
 
     private Button button;
     // Start is called before the first frame update
@@ -53,6 +54,8 @@ public class gravityButton : MonoBehaviour
         gravityInverted = gravityInverted * -1.0f;
         playerRb.gravityScale = -playerRb.gravityScale;
         playerMoveScript.jumpForce = -playerMoveScript.jumpForce;
-       // graph.Rotate(0, 0, 180);
+        float targetY = playerSprite.localScale.y * -1;
+        playerSprite.localScale = new Vector3(playerSprite.localScale.x, targetY, playerSprite.localScale.z);
+        // graph.Rotate(0, 0, 180);
     }
 }
