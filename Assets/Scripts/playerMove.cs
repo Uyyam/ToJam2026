@@ -15,7 +15,7 @@ public class playerMove : MonoBehaviour
     public Transform groundCheckTop;
     public LayerMask groundLayer;
     public AudioSource music;
-    private bool isGrounded;
+    public bool isGrounded;
     private bool isHit;
     void Start()
     {
@@ -28,8 +28,6 @@ public class playerMove : MonoBehaviour
         
         isGrounded = Physics2D.OverlapCircle(groundCheckBottom.position, 0.1f, groundLayer) || Physics2D.OverlapCircle(groundCheckTop.position, 0.1f, groundLayer);
        transform.Translate(new Vector2(x:speed * Time.deltaTime, y:0));
-       Debug.Log("TIME: " + Time.deltaTime * speed);
-              Debug.Log("AUDIO TIME: " + music.time * 0.008f);
         jump();
     }
 

@@ -8,6 +8,7 @@ public class gravityButton : MonoBehaviour
     public playerMove playerMoveScript;
     public Rigidbody2D playerRb;
     public Transform graph;
+    public Scrollbar gravityScrollbar;
     public float gravityInverted = 1.0f;
 
     private Color baseColor;

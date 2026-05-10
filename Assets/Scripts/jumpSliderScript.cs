@@ -11,10 +11,10 @@ public class jumpSliderScript : MonoBehaviour
 	public Transform player;
 	public Slider jumpSlider;
 	public Slider jumpBar;
-	public float minTarget = 4;
-	public float maxTarget = 16;
+	public float minTarget = 5;
+	public float maxTarget = 30;
 	
-	private float playerStartY;
+	public float playerStartY;
     private float jumpDist;
     // Start is called before the first frame update
     void Start()
@@ -25,8 +25,15 @@ public class jumpSliderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    	if(playerScript.isGrounded){
+    	playerStartY = player.position.y;
+    	jumpBar.value=0;
+    	}
+    	if(!playerScript.isGrounded){
         jumpDist = Mathf.Abs(player.position.y - playerStartY);
-    	jumpBar.value= Mathf.Lerp(0, 1, Mathf.InverseLerp(0, 4, jumpDist));
+    	jumpBar.value= Mathf.Lerp(0, 1, Mathf.InverseLerp(0, 7, jumpDist));
+    	print(jumpDist);
+    	}
     }
     
     public void changeJumpForce(){
