@@ -12,6 +12,8 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
 
     public playerMove playerMoveScript;
     public Text BPMText;
+    public AudioSource music;
+    public AudioSource reverse;
     private bool isDragging = false;
     private float previousAngle;
     // Start is called before the first frame update
@@ -72,8 +74,15 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
 
     public void changeSpeed()
     {
-        playerMoveScript.speed = Mathf.Lerp(4, 20, Mathf.InverseLerp(0, 1, currentValue));
-        BPMText.text = Mathf.RoundToInt(Mathf.Lerp(60, 200, Mathf.InverseLerp(0, 1, currentValue))) + " BPM";
+         float newBPM = Mathf.Lerp(70, 210, Mathf.InverseLerp(0, 1, currentValue));
+
+        playerMoveScript.currentBPM = newBPM;
+
+        playerMoveScript.speed = (playerMoveScript.currentBPM / 60f) * playerMoveScript.unitsPerBeat;
+        BPMText.text = Mathf.RoundToInt(newBPM).ToString() + " BPM";
+        music.pitch = Mathf.Lerp(0.5f, 1.5f, Mathf.InverseLerp(70, 210, newBPM));
+        reverse.pitch = music.pitch;
+
     }
 }
 
