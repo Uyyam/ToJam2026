@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -13,7 +14,7 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
     public Image fillBar;
 
     public playerMove playerMoveScript;
-    public Text BPMText;
+    public TextMeshProUGUI BPMText;
     public AudioSource music;
     public AudioSource reverse;
     private bool isDragging = false;
