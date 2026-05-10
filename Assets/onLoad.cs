@@ -28,9 +28,11 @@ public class onLoad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space") && !menuScript.isPlaying){
-                      Next();
-                      }
+    print(player.position.x);
+        if (Input.GetKeyDown("space") && !menuScript.isPlaying)
+        { 
+	        Next(); 
+        }
     }
     
     public void Next(){
