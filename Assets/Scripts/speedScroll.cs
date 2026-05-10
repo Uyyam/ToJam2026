@@ -84,7 +84,7 @@ public class speedScroll : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
         BPMText.text = Mathf.RoundToInt(newBPM).ToString() + " BPM";
         music.pitch = Mathf.Lerp(0.5f, 1.5f, Mathf.InverseLerp(70, 210, newBPM));
         reverse.pitch = music.pitch;
-
-    }
 }
+}
+    
 
