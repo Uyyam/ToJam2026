@@ -15,6 +15,7 @@ public class playerMove : MonoBehaviour
     public Transform groundCheckTop;
     public LayerMask groundLayer;
     public AudioSource music;
+    public bool isMoving = false;
     public bool isGrounded;
     private bool isHit;
     void Start()
@@ -25,10 +26,13 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isMoving){
         
-        isGrounded = Physics2D.OverlapCircle(groundCheckBottom.position, 0.1f, groundLayer) || Physics2D.OverlapCircle(groundCheckTop.position, 0.1f, groundLayer);
        transform.Translate(new Vector2(x:speed * Time.deltaTime, y:0));
+              isGrounded = Physics2D.OverlapCircle(groundCheckBottom.position, 0.1f, groundLayer) || Physics2D.OverlapCircle(groundCheckTop.position, 0.1f, groundLayer);
         jump();
+       }
+
     }
 
     private void jump()
