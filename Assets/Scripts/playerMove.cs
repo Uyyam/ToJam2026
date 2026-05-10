@@ -18,6 +18,7 @@ public class playerMove : MonoBehaviour
     public bool isMoving = false;
     public bool isGrounded;
     private bool isHit;
+    public Animator animator;
     void Start()
     {
         speed =  (currentBPM / 60f) * unitsPerBeat;
@@ -26,12 +27,14 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMoving){
-        
-       transform.Translate(new Vector2(x:speed * Time.deltaTime, y:0));
-              isGrounded = Physics2D.OverlapCircle(groundCheckBottom.position, 0.1f, groundLayer) || Physics2D.OverlapCircle(groundCheckTop.position, 0.1f, groundLayer);
-        jump();
-       }
+        if (isMoving)
+        {
+           transform.Translate(new Vector2(x:speed * Time.deltaTime, y:0)); 
+           isGrounded = Physics2D.OverlapCircle(groundCheckBottom.position, 0.1f, groundLayer) || Physics2D.OverlapCircle(groundCheckTop.position, 0.1f, groundLayer);
+            jump();
+       } 
+        animator.SetBool("is_moving", isMoving);
+        animator.SetBool("player_grounded", isGrounded);
 
     }
 
@@ -39,6 +42,7 @@ public class playerMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            animator.SetTrigger("jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }

@@ -8,30 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5a1d8b4-25d4-4e43-acef-379604e3044e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ToJam2026/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ToJam2026/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/Player.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/Player.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/held.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/held.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/ladyOfTheLake__0.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/ladyOfTheLake__0.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/player_anims.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/player_anims.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/run.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/run.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/ladyOfTheLake_.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Characters/ladyOfTheLake_.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Base 1.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Base 1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ToJam2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToJam2026/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/Player1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/Player1.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/animations/jump.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/ladyOfTheLake_.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/ladyOfTheLake_.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Base.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Base.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/playerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/playerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/moveScrubber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/moveScrubber.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +28,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/playerAnimations.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3DT6f7nhDs6qHsAIH7HVXn4IWu2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -63,7 +47,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "placeholder-animations",
+    "git-widget-placeholder": "player-animations",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
